@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <link rel="stylesheet" href="./css/index.css" />
+    <script src="https://kit.fontawesome.com/1eb3bac550.js" crossorigin="anonymous"></script>
+    <title>Esercizio Gamification Ilaria Ranieri</title>
+</head>
+
+<body>
+
+    <div id="container">
+        <div class="explanation-container">
+            <div class="exp">
+                <p>
+                    Codeverse si basa sull'idea di creare un gioco interattivo che insegni la programmazione attraverso
+                    l'uso di un universo immaginario, personaggi di supporto e tecnologie web avanzate a studenti
+                    giovanissimi, anche grazie alla grafica colorata e cartoonesca.
+                    <br />
+                    <br />
+                    I tre pianeti e Codey sono assets gratuiti e quindi non creati da me. L'assemblaggio dei tre
+                    pianeti, invece, l'ho effettuato con Photoshop ricreando gli anelli e le stelle.
+                </p>
+            </div>
+        </div>
+
+        <div id="map"></div>
+
+        <div id="myModal" class="modal hidden">
+            <div class="modal-content scale-in-center">
+                <div class="close-container">
+                    <div class="title">
+                        <h2>Unità 1: Benvenuto su HTMLON</h2>
+                    </div>
+                    <div class="close"><span>&times;</span></div>
+                </div>
+                <div class='unitdesc-container'>
+                    <div class='img-container'>
+                        <img class="placeholder-image" src="./img/alien.png"
+                            alt="Codey, l'aiutante del pianeta Codeverse, un buffo alieno celeste">
+                    </div>
+                    <div class='desc-container'>
+                        <p>Benvenuto sul pianeta <strong>HTMLON</strong>!
+                            <br />
+                            Il mio nome è <strong>Codey</strong> e sarò la tua guida per il vasto universo di
+                            <strong>CODEVERSE</strong>!
+                            <br />
+                            Sei pronto a muovere i primi passi su HTMLON e scoprire tutti i segreti dell'HTML?! Dai,
+                            allora, iniziamo!
+                    </div>
+                </div>
+                <div class="units-container">
+                    <div id="unit1" class="unit">
+                        <div class="unit-title"><span>Introduzione</span></div>
+                        <div class="unit-video"><i id="introduzione" class="fa-solid fa-circle-play"
+                                onclick="openVideoModal()"></i></div>
+                    </div>
+                    <div id="unit2" class="unit opacity">
+                        <div class="unit-title"><span>Hello HTMLON! - Come creare la tua prima pagina</span></div>
+                        <div class="unit-video"><i id="introduzione" class="fa-solid fa-circle-play"></i></div>
+                    </div>
+                    <div id="unit2" class="unit opacity">
+                        <div class="unit-title"><span>Elementi e Tag - Cosa sono e come si utilizzano</span></div>
+                        <div class="unit-video"><i id="introduzione" class="fa-solid fa-circle-play"></i></div>
+                    </div>
+                </div>
+                <div class="btn-container">
+                    <button id="closeBtn">Chiudi</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="modalVideo" class="modalVideo hidden">
+            <div class="modal-content video scale-in-center">
+                <div class="close-container">
+                    <div class="title">
+                        <h2>Introduzione</h2>
+                    </div>
+                    <div id="closeVideoX" class="close"><span onclick="closeVideoModal()">&times;</span></div>
+                </div>
+                <div class='unitdesc-container'>
+                    <div id="player"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="customMap.js"></script>
+</body>
+
+</html>
